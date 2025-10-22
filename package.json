@@ -1,25 +1,21 @@
 {
-  "name": "food-del-backend",
-  "version": "1.0.0",
-  "description": "",
-  "type": "module",
-  "main": "server.js",
+  "name": "abbrev",
+  "version": "1.1.1",
+  "description": "Like ruby's abbrev module, but in js",
+  "author": "Isaac Z. Schlueter <i@izs.me>",
+  "main": "abbrev.js",
   "scripts": {
-    "server": "nodemon server.js"
+    "test": "tap test.js --100",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "postpublish": "git push origin --all; git push origin --tags"
   },
-  "author": "",
+  "repository": "http://github.com/isaacs/abbrev-js",
   "license": "ISC",
-  "dependencies": {
-    "bcrypt": "^5.1.1",
-    "body-parser": "^1.20.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.1",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.1.1",
-    "multer": "^1.4.5-lts.1",
-    "nodemon": "^3.0.3",
-    "stripe": "^14.17.0",
-    "validator": "^13.11.0"
-  }
+  "devDependencies": {
+    "tap": "^10.1"
+  },
+  "files": [
+    "abbrev.js"
+  ]
 }
